@@ -1,0 +1,48 @@
+.logement_presentation_host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 1200px) {
+        flex-direction: column-reverse;
+        min-width: 200px;
+        justify-content: flex-end;
+    }
+
+    &_profil {
+        display: flex;
+        gap: 10px;
+
+        &_name {
+            color: #FF6060;
+            font-size: 12px;
+            font-weight: 500;
+
+            @media only screen and (min-width: 1200px) {
+                font-size: 18px;
+            }
+        }
+
+        &_img {
+            height: 32px;
+            width: 32px;
+            margin: auto;
+
+            @media only screen and (min-width: 1200px) {
+                height: 64px;
+                width: 64px;
+            }
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &_rating {
+        margin-top: 20px;
+    }
+}
