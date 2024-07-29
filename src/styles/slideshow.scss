@@ -58,6 +58,7 @@
         visibility: hidden;
 
         @media only screen and (min-width: 768px) {
+            visibility: visible;
             position: absolute;
             bottom: 10px;
             left: 50%;
