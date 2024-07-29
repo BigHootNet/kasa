@@ -71,11 +71,11 @@
     }
 
     &_collapse {
-        z-index: 2;
         display: flex;
-        gap: 50px;
         flex-direction: column;
+        z-index: 2;
         gap: 20px;
+        width: 100%;
 
         @media only screen and (min-width: 768px) {
             flex-direction: row;
@@ -84,14 +84,21 @@
         .collapse_title {
             margin-top: 0;
             border-radius: 5px;
+            flex-grow: 1;
+            width: 100%;
 
             @media only screen and (min-width: 768px) {
                 border-radius: 10px;
+                width: auto;
             }
         }
 
-        .collapses {
+        .collapse {
             flex: 1;
+            width: 90%;
+            @media only screen and (min-width: 768px) {
+                width: auto;
+            }
         }
     }
 }

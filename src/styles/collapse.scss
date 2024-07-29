@@ -1,8 +1,5 @@
 .collapse {
     max-width: 1023px;
-    margin: auto;
-    margin-top: 10vh;
-    margin-bottom: 5.3vh;
 
     ul {
         padding: 0;
@@ -32,20 +29,19 @@
             padding: 5px 30px 5px 20px;
         }
 
-        &::after {
-            content: url('../../assets/chevronUp_mobiles.svg');
+        .chevron {
+            width: 10px;
+            height: 15px;
+            background: url('../assets/chevronUp_mobiles.svg') no-repeat center;
+            transition: transform 0.3s ease;
 
             @media only screen and (min-width: 768px) {
-                content: url('../../assets/chevronUp.svg');
+                background: url('../assets/chevronUp.svg') no-repeat center;
             }
         }
 
-        &.open::after {
-            content: url('../../assets/chevronDown_mobiles.svg');
-
-            @media only screen and (min-width: 768px) {
-                content: url('../../assets/chevronDown.svg');
-            }
+        &.open .chevron {
+            transform: rotate(180deg);
         }
 
         @media only screen and (min-width: 768px) {

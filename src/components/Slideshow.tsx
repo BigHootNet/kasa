@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import '../styles/slideshow.scss';
+
 type SlideProps = {
-    pictures: string[];
-  }
+  pictures: string[];
+}
+
 function Slideshow({ pictures }: SlideProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -51,6 +53,11 @@ function Slideshow({ pictures }: SlideProps) {
             onKeyDown={(e) => handleKeyDown(e, handleNext)}
             aria-label="Image suivante"
           ></button>
+        </div>
+      )}
+      {pictures.length > 1 && (
+        <div className="logement_slideshow_indicator">
+          {`${currentIndex + 1}/${pictures.length}`}
         </div>
       )}
     </div>

@@ -20,7 +20,7 @@ function Collapse(props: CollapseProps) {
   };
 
   return (
-    <div>
+    <div className="collapse">
       <div
         tabIndex={0}
         className={`collapse_title ${isOpen ? 'open' : ''}`}
@@ -29,6 +29,7 @@ function Collapse(props: CollapseProps) {
         aria-expanded={isOpen}
       >
         {props.title}
+        <div className="chevron"></div>
       </div>
       <div className={`collapse_text ${isOpen ? 'open' : ''}`}>
         {props.content}

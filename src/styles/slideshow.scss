@@ -12,7 +12,7 @@
         object-fit: cover;
         height: 100%;
         width: 100%;
-        border-radius: 50px;
+        border-radius: 25px;
     }
 
     &_arrows {
@@ -51,6 +51,22 @@
                 background: url('../assets/arrowRight.svg') center center no-repeat;
                 right: 5%;
             }
+        }
+    }
+
+    &_indicator {
+        visibility: hidden;
+
+        @media only screen and (min-width: 768px) {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 18px;
+    
         }
     }
 }
